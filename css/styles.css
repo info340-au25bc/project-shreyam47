@@ -1,0 +1,15 @@
+body {
+    margin: 0px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: green;
+}
+
+.nav_links {
+    text-decoration: none;
+    color: black;
+    margin: 10px; /*auto?*/
+}
