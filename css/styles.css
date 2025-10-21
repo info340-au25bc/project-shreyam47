@@ -1,11 +1,14 @@
 body {
     margin: 0px;
+    background-color: #F5ECD5;
 }
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    background-color: green;
+
+p, h1, h2, h3, h4, h5, h6, .btn {
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+#nav {
+    background-color: #F0BB78;
 }
 
 .nav_links {
@@ -13,3 +16,53 @@ nav {
     color: black;
     margin: 10px; /*auto?*/
 }
+
+.btn-primary {
+    background-color: #626F47;
+    border: none;
+    margin: 5px 0px;
+}
+
+.btn-primary:hover {
+    background-color: #A4B465;
+}
+
+/* SHOPPING PAGE */
+
+/* Range slider for rating */
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #626F47;
+  border-radius: 50%;
+}
+
+.card {
+    margin: 5px;
+    max-width: fit-content;
+    background-color: #F0BB78;
+}
+
+.filterSection {
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #F0BB78;
+}
+
+.sustainabilityCalculator {
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #F0BB78;
+    margin-right: 25%;
+}
+/*//////*/
+
+@media (max-width: 786px) {
+    p {
+        font-size: .75rem;
+    }
+
+    .card {
+        max-width: 60%;
+    }
+} 
