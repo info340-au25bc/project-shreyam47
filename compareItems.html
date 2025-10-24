@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav id="nav" class="navbar d-flex flex-row justify-content-end navbar-expand-lg p-2">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">GreenThread</a>
@@ -31,5 +32,79 @@
             </div>
         </div>
     </nav>
+
+    <!-- Main Comparison -->
+    <main class="container my-5">
+        <h1 class="text-center mb-4">Compare Items</h1>
+        <p class="text-center text-muted mb-5">
+            Compare your favorite closet items side by side.
+        </p>
+        
+        <!-- Dropdown -->
+        <div class="row mb-4">
+            <div class="col-md-5">
+                <label for="item1Select" class="form-label fw-bold">Choose Item</label>
+                <select class="form-select" id="item1Select" aria-label="Select first item to compare">
+                    <option selected>Select an item...</option>
+                    <option value="1">Closet Item 1</option>
+                    <option value="2">Closet Item 2</option>
+                    <option value="3">Closet Item 3</option>
+                    <option value="4">Closet Item 4</option>
+                </select>
+            </div>
+            
+            <div class="col-md-2 d-flex align-items-end justify-content-center">
+                <span class="fs-3 text-muted">vs</span>
+            </div>
+            
+            <div class="col-md-5">
+                <label for="item2Select" class="form-label fw-bold">Choose Item</label>
+                <select class="form-select" id="item2Select" aria-label="Select second item to compare">
+                    <option selected>Select an item...</option>
+                    <option value="1">Closet Item 1</option>
+                    <option value="2">Closet Item 2</option>
+                    <option value="3">Closet Item 3</option>
+                    <option value="4">Closet Item 4</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Comparison Criteria -->
+        <div class="card-footer bg-white border-0 p-3">
+            <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-start mb-3">
+                    <span class="me-2">⭐</span>
+                    <div>
+                        <strong>Price</strong>
+                        <p class="mb-0 text-muted small">$Price</p>
+                    </div>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                    <span class="me-2">⭐</span>
+                    <div>
+                        <strong>Material/Fabric Composition</strong>
+                        <p class="mb-0 text-muted small">Composition %</p>
+                    </div>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                    <span class="me-2">⭐</span>
+                    <div>
+                        <strong>Rating</strong>
+                        <p class="mb-0 text-muted small">Rating / 5.0</p>
+                    </div>
+                </li>
+                
+                <li class="d-flex align-items-start mb-3">
+                    <span class="me-2">⭐</span>
+                    <div>
+                        <strong>Carbon Emission</strong>
+                        <p class="mb-0 text-muted small">000</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
 </body>
 </html>
