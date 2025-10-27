@@ -3,6 +3,22 @@ body {
     background-color: #F5ECD5;
 }
 
+#signUpBody {
+    font-family: "Inter", sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#signUpmain {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
 p, h1, h2, h3, h4, h5, h6, .btn {
     font-family: 'Raleway', Arial, sans-serif;
 }
@@ -50,8 +66,6 @@ button {
 button:hover {
     background-color: #A4B465;
 }
-
-/* SHOPPING PAGE */
 
 /* Range slider for rating */
 input[type="range"]::-webkit-slider-thumb {
