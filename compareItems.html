@@ -3,35 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Anmol Gill">
+    <meta name="description" content="Compare clothing items from your closet side by side">
     <title>Compare Items</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav id="nav" class="navbar d-flex flex-row justify-content-end navbar-expand-lg p-2">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">GreenThread</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
-                    <li><a class="nav-link" href="shop.html">Shop</a></li>
-                    <li><a class="nav-link" href="compareItems.html">Compare Items</a></li>
-                    <li><a class="nav-link" href="yourCloset.html">Your Closet</a></li>
-                </ul>
+    <header>
+        <!-- Navbar -->
+        <nav id="nav" class="navbar d-flex flex-row justify-content-end navbar-expand-lg p-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">GreenThread</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="shop.html">Shop</a></li>
+                        <li><a class="nav-link" href="compareItems.html">Compare Items</a></li>
+                        <li><a class="nav-link" href="yourCloset.html">Your Closet</a></li>
+                    </ul>
 
-                <span class="navbar-text">
-                    <form class="container-fluid justify-content-start">
-                        <a id="signUpLink" href="signup.html">Log In</a>
-                    </form>
-                </span>
+                    <span class="navbar-text">
+                        <form class="container-fluid justify-content-start">
+                            <a id="signUpLink" href="signup.html">Log In</a>
+                        </form>
+                    </span>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Main Comparison -->
     <main class="container my-5">
@@ -41,70 +46,143 @@
         </p>
         
         <!-- Dropdown -->
-        <div class="row mb-4">
-            <div class="col-md-5">
-                <label for="item1Select" class="form-label fw-bold">Choose Item</label>
-                <select class="form-select" id="item1Select" aria-label="Select first item to compare">
-                    <option selected>Select an item...</option>
-                    <option value="1">Closet Item 1</option>
-                    <option value="2">Closet Item 2</option>
-                    <option value="3">Closet Item 3</option>
-                    <option value="4">Closet Item 4</option>
-                </select>
-            </div>
-            
-            <div class="col-md-2 d-flex align-items-end justify-content-center">
-                <span class="fs-3 text-muted">vs</span>
-            </div>
-            
-            <div class="col-md-5">
-                <label for="item2Select" class="form-label fw-bold">Choose Item</label>
-                <select class="form-select" id="item2Select" aria-label="Select second item to compare">
-                    <option selected>Select an item...</option>
-                    <option value="1">Closet Item 1</option>
-                    <option value="2">Closet Item 2</option>
-                    <option value="3">Closet Item 3</option>
-                    <option value="4">Closet Item 4</option>
-                </select>
-            </div>
-        </div>
+        <form>
+            <div class="row mb-4 g-4">
+                <div class="col-md-5">
+                    <label for="item1Select" class="form-label fw-bold">Choose Item</label>
+                    <select class="form-select" id="item1Select" aria-label="Select first item to compare">
+                        <option selected>Select an item...</option>
+                        <option value="1">Closet Item 1</option>
+                        <option value="2">Closet Item 2</option>
+                        <option value="3">Closet Item 3</option>
+                        <option value="4">Closet Item 4</option>
+                    </select>
+                </div>
 
-        <!-- Comparison Criteria -->
-        <div class="card-footer bg-white border-0 p-3">
-            <ul class="list-unstyled mb-0">
-                <li class="d-flex align-items-start mb-3">
-                    <span class="me-2">⭐</span>
-                    <div>
-                        <strong>Price</strong>
-                        <p class="mb-0 text-muted small">$Price</p>
-                    </div>
-                </li>
-                <li class="d-flex align-items-start mb-3">
-                    <span class="me-2">⭐</span>
-                    <div>
-                        <strong>Material/Fabric Composition</strong>
-                        <p class="mb-0 text-muted small">Composition %</p>
-                    </div>
-                </li>
-                <li class="d-flex align-items-start mb-3">
-                    <span class="me-2">⭐</span>
-                    <div>
-                        <strong>Rating</strong>
-                        <p class="mb-0 text-muted small">Rating / 5.0</p>
-                    </div>
-                </li>
+                <div class="col-md-2"></div>
                 
-                <li class="d-flex align-items-start mb-3">
-                    <span class="me-2">⭐</span>
-                    <div>
-                        <strong>Carbon Emission</strong>
-                        <p class="mb-0 text-muted small">000</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+                <div class="col-md-5">
+                    <label for="item2Select" class="form-label fw-bold">Choose Item</label>
+                    <select class="form-select" id="item2Select" aria-label="Select second item to compare">
+                        <option selected>Select an item...</option>
+                        <option value="1">Closet Item 1</option>
+                        <option value="2">Closet Item 2</option>
+                        <option value="3">Closet Item 3</option>
+                        <option value="4">Closet Item 4</option>
+                    </select>
+                </div>
+            </div>
+        </form>
 
+        <!-- Comparison -->
+        <div class="row g-4">
+
+            <!-- left -->
+            <div class="col-md-5">
+                    <!-- top -->
+                <div class="card shadow-sm h-100">
+                    <img src="img/placeHolder.jpg" class="card-img-top" alt="image description">
+                    <div class="card-body">
+                        <h2 class="card-title">Closet Item</h2>
+                        <p class="text-muted mb-1">Brand</p>
+                        <p class="fw-bold text-success fs-4">$Price</p>
+                        <p class="text-muted">Description</p>
+                    </div>
+                        <!-- bottom -->
+                    <div class="card-footer bg-white p-3">
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex align-items-start mb-3">
+                                <span class="me-2">⭐</span>
+                                <div>
+                                    <strong>Price</strong>
+                                    <p class="mb-0 text-muted small">$Price</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start mb-3">
+                                <span class="me-2">⭐</span>
+                                <div>
+                                    <strong>Fabric Composition</strong>
+                                    <p class="mb-0 text-muted small">Composition %</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start mb-3">
+                                <span class="me-2">⭐</span>
+                                <div>
+                                    <strong>Rating</strong>
+                                    <p class="mb-0 text-muted small">Rating / 5.0</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <span class="me-2">⭐</span>
+                                <div>
+                                    <strong>Carbon Emission</strong>
+                                    <p class="mb-0 text-muted small">000</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Space -->
+            <div class="col-md-2"></div>
+
+
+            <!-- Right -->
+            <div class="col-md-5">
+                    <!-- top -->
+                <div class="card shadow-sm h-100">
+                    <img src="img/placeHolder.jpg" class="card-img-top" alt="image description">
+                    <div class="card-body">
+                        <h2 class="card-title">Closet Item</h2>
+                        <p class="text-muted mb-1">Brand</p>
+                        <p class="fw-bold text-success fs-4">$Price</p>
+                        <p class="text-muted">Description</p>
+                    </div>
+                        <!-- bottom -->
+                    <div class="card-footer bg-white p-3">
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex align-items-start mb-3">
+                                <span class="me-2">⭐</span>
+                                <div>
+                                    <strong>Price</strong>
+                                    <p class="mb-0 text-muted small">$Price</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start mb-3">
+                                <span class="me-2">⭐</span>
+                                <div>
+                                    <strong>Fabric Composition</strong>
+                                    <p class="mb-0 text-muted small">Composition %</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start mb-3">
+                                <span class="me-2">⭐</span>
+                                <div>
+                                    <strong>Rating</strong>
+                                    <p class="mb-0 text-muted small">Rating / 5.0</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <span class="me-2">⭐</span>
+                                <div>
+                                    <strong>Carbon Emission</strong>
+                                    <p class="mb-0 text-muted small">000</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
+            </div>        
+        </div>
     </main>
 
+    <footer class="bg-light text-center py-4 mt-5">
+        <p class="mb-1">&copy; 2025 GreenThread. All rights reserved.</p>
+        <p class="small text-muted mb-0">
+            Contact: <a href="mailto:contact@greenthread.com" class="text-muted text-decoration-none">contact@greenthread.com</a> 
+            | Follow us on social media
+        </p>
+    </footer>
 </body>
 </html>

@@ -128,3 +128,8 @@ input[type="range"]::-webkit-slider-thumb {
 .saved-items .btn-primary:hover {
     background-color: #A4B465;
 }
+
+.card-img-top {
+    border: 5px solid #626F47;
+    border-radius: 10px;
+}
