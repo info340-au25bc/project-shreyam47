@@ -13,23 +13,23 @@
 </head>
 <body>
         <!-- Navbar -->
-        <nav id="nav" class="navbar d-flex flex-row justify-content-end navbar-expand-lg p-2">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">GreenThread</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <nav id="nav" className="navbar d-flex flex-row justify-content-end navbar-expand-lg p-2">
+            <div className="container-fluid">
+                <a className="navbar-brand" href="#">GreenThread</a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
-                        <li><a class="nav-link" href="shop.html">Shop</a></li>
-                        <li><a class="nav-link" href="compareItems.html">Compare Items</a></li>
-                        <li><a class="nav-link" href="yourCloset.html">Your Closet</a></li>
-                        <li><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+                <div className="collapse navbar-collapse" id="navbarText">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li><a className="nav-link" aria-current="page" href="index.html">Home</a></li>
+                        <li><a className="nav-link" href="shop.html">Shop</a></li>
+                        <li><a className="nav-link" href="compareItems.html">Compare Items</a></li>
+                        <li><a className="nav-link" href="yourCloset.html">Your Closet</a></li>
+                        <li><a className="nav-link" href="contactUs.html">Contact Us</a></li>
                     </ul>
 
-                <span class="navbar-text">
-                    <form class="container-fluid justify-content-start">
+                <span className="navbar-text">
+                    <form className="container-fluid justify-content-start">
                         <a id="signUpLink" href="signup.html">Log In</a>
                     </form>
                 </span>
@@ -38,18 +38,18 @@
     </nav>
 
     <!-- Main Comparison -->
-    <main class="container my-5">
-        <h1 class="text-center mb-4">Compare Items</h1>
-        <p class="text-center text-muted mb-5">
+    <main className="container my-5">
+        <h1 className="text-center mb-4">Compare Items</h1>
+        <p className="text-center text-muted mb-5">
             Compare your favorite closet items side by side.
         </p>
         
         <!-- Dropdown -->
         <div>
-            <div class="row mb-4 g-4">
-                <div class="col-md-5">
-                    <label for="item1Select" class="form-label fw-bold">Choose Item</label>
-                    <select class="form-select" id="item1Select" aria-label="Select first item to compare">
+            <div className="row mb-4 g-4">
+                <div className="col-md-5">
+                    <label for="item1Select" className="form-label fw-bold">Choose Item</label>
+                    <select className="form-select" id="item1Select" aria-label="Select first item to compare">
                         <option selected>Select an item...</option>
                         <option value="1">Closet Item 1</option>
                         <option value="2">Closet Item 2</option>
@@ -58,11 +58,11 @@
                     </select>
                 </div>
 
-                <div class="col-md-2"></div>
+                <div className="col-md-2"></div>
                 
-                <div class="col-md-5">
-                    <label for="item2Select" class="form-label fw-bold">Choose Item</label>
-                    <select class="form-select" id="item2Select" aria-label="Select second item to compare">
+                <div className="col-md-5">
+                    <label for="item2Select" className="form-label fw-bold">Choose Item</label>
+                    <select className="form-select" id="item2Select" aria-label="Select second item to compare">
                         <option selected>Select an item...</option>
                         <option value="1">Closet Item 1</option>
                         <option value="2">Closet Item 2</option>
@@ -74,48 +74,48 @@
         </div>
 
         <!-- Comparison -->
-        <div class="row g-4">
+        <div className="row g-4">
 
             <!-- left -->
-            <div class="col-md-5">
+            <div className="col-md-5">
                     <!-- top -->
-                <div class="card shadow-sm h-100">
-                    <img src="img/placeHolder.jpg" class="card-img-top" alt="image description">
-                    <div class="card-body">
-                        <h2 class="card-title">Closet Item</h2>
-                        <p class="text-muted mb-1">Brand</p>
-                        <p class="fw-bold text-success fs-4">$Price</p>
-                        <p class="text-muted">Description</p>
+                <div className="card shadow-sm h-100">
+                    <img src="img/placeHolder.jpg" className="card-img-top" alt="image description">
+                    <div className="card-body">
+                        <h2 className="card-title">Closet Item</h2>
+                        <p className="text-muted mb-1">Brand</p>
+                        <p className="fw-bold text-success fs-4">$Price</p>
+                        <p className="text-muted">Description</p>
                     </div>
                         <!-- bottom -->
-                    <div class="card-footer bg-white p-3">
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-flex align-items-start mb-3">
-                                <span class="me-2">⭐</span>
+                    <div className="card-footer bg-white p-3">
+                            <ul className="list-unstyled mb-0">
+                                <li className="d-flex align-items-start mb-3">
+                                <span className="me-2">⭐</span>
                                 <div>
                                     <strong>Price</strong>
-                                    <p class="mb-0 text-muted small">$Price</p>
+                                    <p className="mb-0 text-muted small">$Price</p>
                                 </div>
                             </li>
-                            <li class="d-flex align-items-start mb-3">
-                                <span class="me-2">⭐</span>
+                            <li className="d-flex align-items-start mb-3">
+                                <span className="me-2">⭐</span>
                                 <div>
                                     <strong>Fabric Composition</strong>
-                                    <p class="mb-0 text-muted small">Composition %</p>
+                                    <p className="mb-0 text-muted small">Composition %</p>
                                 </div>
                             </li>
-                            <li class="d-flex align-items-start mb-3">
-                                <span class="me-2">⭐</span>
+                            <li className="d-flex align-items-start mb-3">
+                                <span className="me-2">⭐</span>
                                 <div>
                                     <strong>Rating</strong>
-                                    <p class="mb-0 text-muted small">Rating / 5.0</p>
+                                    <p className="mb-0 text-muted small">Rating / 5.0</p>
                                 </div>
                             </li>
-                            <li class="d-flex align-items-start">
-                                <span class="me-2">⭐</span>
+                            <li className="d-flex align-items-start">
+                                <span className="me-2">⭐</span>
                                 <div>
                                     <strong>Carbon Emission</strong>
-                                    <p class="mb-0 text-muted small">000</p>
+                                    <p className="mb-0 text-muted small">000</p>
                                 </div>
                             </li>
                         </ul>
@@ -124,49 +124,49 @@
             </div>
 
             <!-- Space -->
-            <div class="col-md-2"></div>
+            <div className="col-md-2"></div>
 
 
             <!-- Right -->
-            <div class="col-md-5">
+            <div className="col-md-5">
                     <!-- top -->
-                <div class="card shadow-sm h-100">
-                    <img src="img/placeHolder.jpg" class="card-img-top" alt="image description">
-                    <div class="card-body">
-                        <h2 class="card-title">Closet Item</h2>
-                        <p class="text-muted mb-1">Brand</p>
-                        <p class="fw-bold text-success fs-4">$Price</p>
-                        <p class="text-muted">Description</p>
+                <div className="card shadow-sm h-100">
+                    <img src="img/placeHolder.jpg" className="card-img-top" alt="image description">
+                    <div className="card-body">
+                        <h2 className="card-title">Closet Item</h2>
+                        <p className="text-muted mb-1">Brand</p>
+                        <p className="fw-bold text-success fs-4">$Price</p>
+                        <p className="text-muted">Description</p>
                     </div>
                         <!-- bottom -->
-                    <div class="card-footer bg-white p-3">
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-flex align-items-start mb-3">
-                                <span class="me-2">⭐</span>
+                    <div className="card-footer bg-white p-3">
+                            <ul className="list-unstyled mb-0">
+                                <li className="d-flex align-items-start mb-3">
+                                <span className="me-2">⭐</span>
                                 <div>
                                     <strong>Price</strong>
-                                    <p class="mb-0 text-muted small">$Price</p>
+                                    <p className="mb-0 text-muted small">$Price</p>
                                 </div>
                             </li>
-                            <li class="d-flex align-items-start mb-3">
-                                <span class="me-2">⭐</span>
+                            <li className="d-flex align-items-start mb-3">
+                                <span className="me-2">⭐</span>
                                 <div>
                                     <strong>Fabric Composition</strong>
-                                    <p class="mb-0 text-muted small">Composition %</p>
+                                    <p className="mb-0 text-muted small">Composition %</p>
                                 </div>
                             </li>
-                            <li class="d-flex align-items-start mb-3">
-                                <span class="me-2">⭐</span>
+                            <li className="d-flex align-items-start mb-3">
+                                <span className="me-2">⭐</span>
                                 <div>
                                     <strong>Rating</strong>
-                                    <p class="mb-0 text-muted small">Rating / 5.0</p>
+                                    <p className="mb-0 text-muted small">Rating / 5.0</p>
                                 </div>
                             </li>
-                            <li class="d-flex align-items-start">
-                                <span class="me-2">⭐</span>
+                            <li className="d-flex align-items-start">
+                                <span className="me-2">⭐</span>
                                 <div>
                                     <strong>Carbon Emission</strong>
-                                    <p class="mb-0 text-muted small">000</p>
+                                    <p className="mb-0 text-muted small">000</p>
                                 </div>
                             </li>
                         </ul>

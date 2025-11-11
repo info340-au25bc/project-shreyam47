@@ -12,23 +12,23 @@
 <body id = "signUpBody">
 
   <!-- Navbar -->
-  <nav id="nav" class="navbar d-flex flex-row justify-content-end navbar-expand-lg p-2">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">GreenThread</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+  <nav id="nav" className="navbar d-flex flex-row justify-content-end navbar-expand-lg p-2">
+        <div className="container-fluid">
+            <a className="navbar-brand" href="#">GreenThread</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
-                    <li><a class="nav-link" href="shop.html">Shop</a></li>
-                    <li><a class="nav-link" href="compareItems.html">Compare Items</a></li>
-                    <li><a class="nav-link" href="yourCloset.html">Your Closet</a></li>
-                    <li><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+            <div className="collapse navbar-collapse" id="navbarText">
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li><a className="nav-link" aria-current="page" href="index.html">Home</a></li>
+                    <li><a className="nav-link" href="shop.html">Shop</a></li>
+                    <li><a className="nav-link" href="compareItems.html">Compare Items</a></li>
+                    <li><a className="nav-link" href="yourCloset.html">Your Closet</a></li>
+                    <li><a className="nav-link" href="contactUs.html">Contact Us</a></li>
                 </ul>
 
-                <span class="navbar-text">
-                    <form class="container-fluid justify-content-start">
+                <span className="navbar-text">
+                    <form className="container-fluid justify-content-start">
                         <a id="signUpLink" href="signup.html">Log In</a>
                     </form>
                 </span>
@@ -38,54 +38,54 @@
 
   <!-- Main Content -->
   <main id = "signUpMain">
-    <div class="card shadow-sm p-4" style="max-width: 400px; width: 100%;">
-      <h3 class="text-center mb-3 fw-semibold">Welcome to GreenThread</h3>
-      <ul class="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="signin-tab" data-bs-toggle="pill" data-bs-target="#signin" type="button" role="tab">Sign In</button>
+    <div className="card shadow-sm p-4" style="max-width: 400px; width: 100%;">
+      <h3 className="text-center mb-3 fw-semibold">Welcome to GreenThread</h3>
+      <ul className="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
+        <li className="nav-item" role="presentation">
+          <button className="nav-link active" id="signin-tab" data-bs-toggle="pill" data-bs-target="#signin" type="button" role="tab">Sign In</button>
         </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab">Register</button>
+        <li className="nav-item" role="presentation">
+          <button className="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab">Register</button>
         </li>
       </ul>
 
-      <div class="tab-content" id="pills-tabContent">
+      <div className="tab-content" id="pills-tabContent">
         <!-- Sign In Form -->
-        <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+        <div className="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
           <form>
-            <div class="mb-3">
-              <label for="signinEmail" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="signinEmail" placeholder="you@example.com" required>
+            <div className="mb-3">
+              <label for="signinEmail" className="form-label">Email address</label>
+              <input type="email" className="form-control" id="signinEmail" placeholder="you@example.com" required>
             </div>
-            <div class="mb-3">
-              <label for="signinPassword" class="form-label">Password</label>
-              <input type="password" class="form-control" id="signinPassword" placeholder="Enter your password" required>
+            <div className="mb-3">
+              <label for="signinPassword" className="form-label">Password</label>
+              <input type="password" className="form-control" id="signinPassword" placeholder="Enter your password" required>
             </div>
-            <button type="submit" class="btn btn-success w-100">Sign In</button>
+            <button type="submit" className="btn btn-success w-100">Sign In</button>
           </form>
         </div>
 
         <!-- Register Form -->
-        <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+        <div className="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
           <form>
-            <div class="mb-3">
-              <label for="registerName" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="registerName" placeholder="Your full name" required>
+            <div className="mb-3">
+              <label for="registerName" className="form-label">Full Name</label>
+              <input type="text" className="form-control" id="registerName" placeholder="Your full name" required>
             </div>
-            <div class="mb-3">
-              <label for="registerEmail" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="registerEmail" placeholder="you@example.com" required>
+            <div className="mb-3">
+              <label for="registerEmail" className="form-label">Email address</label>
+              <input type="email" className="form-control" id="registerEmail" placeholder="you@example.com" required>
             </div>
-            <div class="mb-3">
-              <label for="registerPassword" class="form-label">Password</label>
-              <input type="password" class="form-control" id="registerPassword" placeholder="Create a password" required>
+            <div className="mb-3">
+              <label for="registerPassword" className="form-label">Password</label>
+              <input type="password" className="form-control" id="registerPassword" placeholder="Create a password" required>
             </div>
-            <button type="submit" class="btn btn-success w-100">Register</button>
+            <button type="submit" className="btn btn-success w-100">Register</button>
           </form>
         </div>
       </div>
-      <div class="text-center mt-3">
-        <a href="index.html" class="text-decoration-none text-secondary small">← Back to Home</a>
+      <div className="text-center mt-3">
+        <a href="index.html" className="text-decoration-none text-secondary small">← Back to Home</a>
       </div>
     </div>
   </main>

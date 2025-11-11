@@ -9,6 +9,8 @@ import {ContactUs} from './ContactUs';
 import { LogIn } from './LogIn';
 import './index.css';
 
+
+// STYLE BROKE BECAUSE OF SHOP PAGE - FIX?
 function App() {
   return (
     <Router>
