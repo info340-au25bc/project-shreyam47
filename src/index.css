@@ -52,8 +52,13 @@ footer {
     padding-right: 5%;
     background-color: #F0BB78;
     align-self: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
+/* border-radius, margin, and padding not working */
 button {
     background-color: #626F47;
     border: none;

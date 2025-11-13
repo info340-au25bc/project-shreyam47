@@ -7,23 +7,25 @@ import {CompareItems} from './CompareItems';
 import {YourCloset} from './YourCloset';
 import {ContactUs} from './ContactUs';
 import { LogIn } from './LogIn';
+import { Footer } from './Footer';
 import './index.css';
 
-
-// STYLE BROKE BECAUSE OF SHOP PAGE - FIX?
 function App() {
   return (
-    <Router>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/compare" element={<CompareItems />} />
-        <Route path="/closet" element={<YourCloset />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/login" element={<LogIn />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/compare" element={<CompareItems />} />
+          <Route path="/closet" element={<YourCloset />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/login" element={<LogIn />} />
+        </Routes>
+      </Router>
+      <Footer />
+    </>
   );
 }
 
