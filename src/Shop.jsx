@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import placeholderImg from "./img/placeHolder.jpg"; // adjust the path as needed
 import './index.css';
 
+//add new page for each item?
 export function Shop() {
   //array placeholder for firebase; work on adding pictures
   const products = [
-    { id: 1, name: "Cotton Shirt", company: "EcoWear", price: "$15", fabric: "Cotton", rating: 3, distance: "20"},
-    { id: 2, name: "Nylon Shirt", company: "GreenWorld", price: "$25", fabric: "Nylon", rating: 5, distance: "10"},
-    { id: 3, name: "Polyester Shirt", company: "Suscanability", price: "$10", fabric: "Polyester", rating: 4, distance: "50"}
+    { id: 1, name: "Cotton Shirt", company: "EcoWear", price: "15", fabric: "Cotton", rating: 3, distance: "20"},
+    { id: 2, name: "Nylon Shirt", company: "GreenWorld", price: "25", fabric: "Nylon", rating: 5, distance: "10"},
+    { id: 3, name: "Polyester Shirt", company: "Suscanability", price: "10", fabric: "Polyester", rating: 4, distance: "50"}
   ];
 
   const [selectedFabrics, setSelectedFabrics] = useState(new Set());
   const [minRating, setMinRating] = useState(0);
   const [sortBy, setSortBy] = useState(null);
+  const [searchText, setSearchText] = useState("");
 
   function handleFabricChange(fabric) {
     setSelectedFabrics((prev) => {
@@ -45,6 +47,36 @@ export function Shop() {
     filteredProducts = filteredProducts.filter((p) => p.rating >= minRating);
   }
 
+  if (sortBy === "price") {
+    filteredProducts = [...filteredProducts].sort((x, y) => x.price - y.price);
+  }
+
+  if (sortBy === "distance") {
+    filteredProducts = [...filteredProducts].sort((x, y) => x.distance - y.distance);
+  }
+
+  if (searchText.trim() !== "") {
+    filteredProducts = filteredProducts.filter((p) => {
+      const name = p.name.toLowerCase();
+      const search = searchText.toLowerCase();
+      return name.includes(search);
+    });
+  }
+
+  if (sortBy === "alphabetical") {
+    filteredProducts = [...filteredProducts].sort((a, b) => {
+      const nameA = a.name.toLowerCase();
+      const nameB = b.name.toLowerCase();
+      if (nameA < nameB) { 
+        return -1;
+      } else if (nameA > nameB) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+  }
+
   function renderProductGrid() {
     return filteredProducts.map((p) => (
       <div key={p.id} className="col mb-4">
@@ -53,7 +85,7 @@ export function Shop() {
           <div className="card-body p-2">
             <h2 className="h5">{p.name}</h2>
             <p className="mb-0">{p.company}</p>
-            <p>{p.price}</p>
+            <p>${p.price}</p>
             <button className="saveBtn" style={{ width: "50%" }}>Save</button>
           </div>
         </div>
@@ -65,10 +97,15 @@ export function Shop() {
     <>
       <main className="d-flex flex-column flex-md-row justify-content-between m-3">
         <div className="firstColumn flex-grow-1 flex-column flex-wrap col-12 col-md-3">
-          <input type="text" id="searchProducts" placeholder="Search.." className="form-control mb-2" />
-            <button type="submit" /*className="btn btn-primary mb-3"*/>
-              Submit
-            </button>
+          <input
+            type="text"
+            id="searchProducts"
+            placeholder="Search.."
+            className="form-control mb-2"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          {/* <button className = "m-1 border rounded" type="submit">Submit</button> */}
 
           <section className="filterSection my-3 p-3 border rounded">
             <h2>Filter Products</h2>
@@ -106,9 +143,12 @@ export function Shop() {
 
             <div className="sortBySection flex-column mt-3">
               <h3>Sort By</h3>
-              <button>Lowest Price</button>
-              <button>Closest Distance</button>
-              <button /*className="btn btn-outline-secondary mb-2"*/>Alphabetical Order</button>
+
+              <button className="m-1 border rounded" onClick={() => handleSortChange("price")}>Lowest Price</button>
+
+              <button className="m-1 border rounded"  onClick={() => handleSortChange("distance")}>Closest Distance</button>
+
+              <button className="m-1 border rounded"  onClick={() => handleSortChange("alpha")}>Alphabetical Order</button>
             </div>
           </section>
 
