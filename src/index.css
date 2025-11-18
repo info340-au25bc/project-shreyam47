@@ -78,6 +78,23 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
 }
 
+/* Style the slider track */
+.ratingSection {
+  accent-color: #626F47;   /* Works in most modern browsers */
+}
+
+/* For full cross-browser control of the slider thumb */
+.ratingSection::-webkit-slider-thumb {
+  background-color: #626F47;
+  border: none;
+}
+
+.ratingSection::-moz-range-thumb {
+  background-color: #626F47;
+  border: none;
+}
+
+
 .card {
     display: flex; 
     text-align: center;
@@ -146,9 +163,4 @@ input[type="range"]::-webkit-slider-thumb {
 
 .saved-items .btn-primary:hover {
     background-color: #A4B465;
-}
-
-.card-img-top {
-    border: 5px solid #626F47;
-    border-radius: 10px;
 }

@@ -78,20 +78,23 @@ export function Shop() {
   }
 
   function renderProductGrid() {
-    return filteredProducts.map((p) => (
-      <div key={p.id} className="col mb-4">
-        <div className="card" style={{ width: "18rem" }}>
-          <img src={placeholderImg} className="card-img-top" alt={p.name} />
-          <div className="card-body p-2">
-            <h2 className="h5">{p.name}</h2>
-            <p className="mb-0">{p.company}</p>
-            <p>${p.price}</p>
-            <button className="saveBtn" style={{ width: "50%" }}>Save</button>
-          </div>
+  return filteredProducts.map((p) => (
+    <div key={p.id} className="col-12 col-sm-6 col-md-4 mb-4">
+      <div className="card h-70">
+        <img src={placeholderImg} className="card-img-top" alt={p.name} />
+        <div className="card-body p-2">
+          <h2 className="h5">{p.name}</h2>
+          <p className="mb-0"><strong>Company: </strong>{p.company}</p>
+          <p className="mb-0"><strong>Price: </strong>${p.price}</p>
+          <p className="mb-0"><strong>Fabric: </strong> {p.fabric}</p>
+          <p className="mb-0"><strong>Rating: </strong>{p.rating}</p>
+          <p className="mb-0"><strong>Distance: </strong>{p.distance} miles</p>
+          <button className="border rounded" style={{ width: "50%" }}>Save</button>
         </div>
       </div>
-    ));
-  };
+    </div>
+  ));
+}
 
   return (
     <>
@@ -159,7 +162,7 @@ export function Shop() {
         </div>
 
         <div className="gridView d-flex justify-content-evenly flex-wrap mx-1 col-12 col-sm-9">
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div className="row g-3">
             {renderProductGrid()}
           </div>  
         </div>
