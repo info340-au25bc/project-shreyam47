@@ -1,5 +1,7 @@
 import React from 'react';
 import './index.css';
+import valleyImg from "./img/valley.jpg";
+import sustainableImg from "./img/sustainable_fashion.jpg";
 
 export function Index() {
   return (
@@ -8,7 +10,7 @@ export function Index() {
       <section
         className="text-center text-white d-flex align-items-center justify-content-center"
         style={{
-          backgroundImage: "url('./img/valley.jpg')",
+          backgroundImage: "url(${valleyImg})",
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "55vh",
@@ -63,7 +65,7 @@ export function Index() {
             {/* Image Section */}
             <div className="col-md-5">
               <img
-                src="./img/sustainable_fashion.jpg"
+                src={sustainableImg}
                 alt="Eco-friendly clothing made from sustainable materials"
                 className="img-fluid rounded"
               />
