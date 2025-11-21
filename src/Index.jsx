@@ -10,7 +10,7 @@ export function Index() {
       <section
         className="text-center text-white d-flex align-items-center justify-content-center"
         style={{
-          backgroundImage: "url(${valleyImg})",
+          backgroundImage: `url('${valleyImg}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "55vh",

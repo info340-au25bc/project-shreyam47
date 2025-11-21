@@ -23,7 +23,7 @@ p, h1, h2, h3, h4, h5, h6, .btn {
     font-family: 'Raleway', Arial, sans-serif;
 }
 
-#nav {
+nav {
     background-color: #F0BB78;
     position: sticky;
     top: 0;
@@ -124,16 +124,6 @@ input[type="range"]::-webkit-slider-thumb {
 }
 /*//////*/
 
-@media (max-width: 786px) {
-    p {
-        font-size: .75rem;
-    }
-
-    .card {
-        max-width: 60%;
-    }
-} 
-
 .saved-items {
     padding: 40px
 }
@@ -164,3 +154,13 @@ input[type="range"]::-webkit-slider-thumb {
 .saved-items .btn-primary:hover {
     background-color: #A4B465;
 }
+
+@media (max-width: 786px) {
+    p {
+        font-size: .75rem;
+    }
+
+    .card {
+        max-width: 60%;
+    }
+} 
