@@ -81,7 +81,7 @@ export function CompareItems() {
                         onClick={clearSelection} 
                         style={{
                             marginTop: "30px",
-                            padding: "10px 40px",
+                            padding: "30px 20px",
                             backgroundColor: "black",
                             color: "white",
                             border: "none",
