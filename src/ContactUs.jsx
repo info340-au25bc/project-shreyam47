@@ -1,6 +1,6 @@
 import React from 'react';
-import forestImage from "./assets/forest.jpeg"
-import peopleImage from "./assets/people.png"
+import forestImage from "./img/forest.jpeg"
+import peopleImage from "./img/people.png"
 
 export function ContactUs() {
     return (
