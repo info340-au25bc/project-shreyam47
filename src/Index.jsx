@@ -3,7 +3,7 @@ import './index.css';
 import valleyImg from "./img/valley.jpg";
 import sustainableImg from "./img/sustainable_fashion.jpg";
 
-export function Index() {
+export function Index(props) {
   return (
     <>
       {/* Hero Section */}
