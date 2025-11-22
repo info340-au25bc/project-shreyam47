@@ -1,6 +1,6 @@
 // // import React from 'react';
 import React, { useState } from "react";
-import placeholder from "./img/placeHolder.jpg";
+import placeholderImg from "./img/placeHolder.jpg";
 import "./index.css";
 
 function ItemCard({ item, isSelected, onClick }) {
@@ -9,7 +9,7 @@ function ItemCard({ item, isSelected, onClick }) {
             className={`item-card ${isSelected ? "selected" : ""}`}
             onClick={() => onClick(item)}
         >
-            <img src={placeholder} alt={item.name} className="item-img" />
+            <img src={placeholderImg} alt={item.name} className="item-img" />
             <h4 className="item-name">{item.name}</h4>
             <p className="item-company">{item.company}</p>
             <p className="item-price">${item.price}</p>
@@ -61,7 +61,7 @@ export function CompareItems() {
                     <h3>Comparison</h3>
                     <div className="comparison-grid">
                         <div className="comparison-card">
-                            <img src={placeholder} alt={firstItem.name} className="comparison-img"/>
+                            <img src={placeholderImg} alt={firstItem.name} className="comparison-img"/>
                             <h4>{firstItem.name}</h4>
                             <p>{firstItem.company}</p>
                             <p>${firstItem.price}</p>
@@ -70,7 +70,7 @@ export function CompareItems() {
                             <p><strong>Carbon Emission: </strong>{firstItem.carbon}</p>
                         </div>
                         <div className="comparison-card">
-                            <img src={placeholder} alt={secondItem.name} className="comparison-img"/>
+                            <img src={placeholderImg} alt={secondItem.name} className="comparison-img"/>
                             <h4>{secondItem.name}</h4>
                             <p>{secondItem.company}</p>
                             <p>${secondItem.price}</p>
