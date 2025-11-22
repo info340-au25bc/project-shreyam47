@@ -4,7 +4,7 @@ import './index.css';
 
 export function Nav() {
   return (
-    <nav id="nav" className="navbar d-flex flex-row justify-content-end navbar-expand-lg p-2">
+    <nav className="navbar d-flex flex-row justify-content-end navbar-expand-lg p-2">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">GreenThread</Link>
 

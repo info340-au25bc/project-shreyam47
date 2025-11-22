@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import placeholderImg from "./img/placeHolder.jpg"; // adjust the path as needed
 import './index.css';
 
-//add new page for each item?
-export function Shop() {
+export function Shop({ addToCloset }) {
   //array placeholder for firebase; work on adding pictures
   const products = [
     { id: 1, name: "Cotton Shirt", company: "EcoWear", price: "15", fabric: "Cotton", rating: 3, distance: "20"},
@@ -89,7 +88,7 @@ export function Shop() {
           <p className="mb-0"><strong>Fabric: </strong> {p.fabric}</p>
           <p className="mb-0"><strong>Rating: </strong>{p.rating}</p>
           <p className="mb-0"><strong>Distance: </strong>{p.distance} miles</p>
-          <button className="border rounded" style={{ width: "50%" }}>Save</button>
+          <button className="border rounded" style={{ width: "50%" }} onClick={() => addToCloset(p)}>Save</button>
         </div>
       </div>
     </div>
