@@ -20,7 +20,7 @@ export function ContactUs() {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-md-7 mb-4 mb-md-0">
-                        <h5 className="fw-semibold">Our Team</h5>
+                        <h2 className="fw-semibold">Our Team</h2>
                         <p>
                             <strong>Jacob Frans</strong>: Junior in Informatics with a concentration in Data Science. Email: jfrans@uw.edu
                         </p>
