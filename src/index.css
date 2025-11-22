@@ -155,15 +155,6 @@ input[type="range"]::-webkit-slider-thumb {
     background-color: #A4B465;
 }
 
-@media (max-width: 786px) {
-    p {
-        font-size: .75rem;
-    }
-
-    .card {
-        max-width: 60%;
-    }
-} 
 .compare-container {
     padding: 20px;
     text-align: center;
@@ -237,3 +228,32 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
     border-radius: 5px;
 }
+
+/* Your closet */
+.saved-items {
+    margin-top: 1.5rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.closet-card {
+    width: 18rem;
+}
+
+.closet-img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 786px) {
+    p {
+        font-size: .75rem;
+    }
+
+    .card {
+        max-width: 60%;
+    }
+} 

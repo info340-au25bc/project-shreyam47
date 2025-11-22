@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import placeholder from "./img/placeholder.jpg";
-import "./YourCloset.css";
+import "./index.css";
 
 
 

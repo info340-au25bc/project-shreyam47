@@ -54,7 +54,7 @@ export function Shop({ addToCloset }) {
     filteredProducts = [...filteredProducts].sort((x, y) => x.distance - y.distance);
   }
 
-  if (searchText.trim() !== "") {
+  if (searchText !== "") {
     filteredProducts = filteredProducts.filter((p) => {
       const name = p.name.toLowerCase();
       const search = searchText.toLowerCase();
@@ -82,7 +82,7 @@ export function Shop({ addToCloset }) {
       <div className="card h-70">
         <img src={placeholderImg} className="card-img-top" alt={p.name} />
         <div className="card-body p-2">
-          <h2 className="h5">{p.name}</h2>
+          <h2>{p.name}</h2>
           <p className="mb-0"><strong>Company: </strong>{p.company}</p>
           <p className="mb-0"><strong>Price: </strong>${p.price}</p>
           <p className="mb-0"><strong>Fabric: </strong> {p.fabric}</p>
