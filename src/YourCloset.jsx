@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import placeholder from "./img/placeholder.jpg";
+import "./YourCloset.css";
 
 
 
@@ -9,7 +10,7 @@ export function YourCloset({ closet, removeFromCloset  }) {
         <h1>Saved Items</h1>
         <div className="card-container d-flex flex-wrap">
             {closet.map((item) => (
-                <div className="card" style={{width: "18rem"}} key={item.id}>
+                <div className="card closet-card" key={item.id}>
                     <img src={placeholder} alt="Clothes Image" />
                     <div className="card-body p-2">
                         <h2>{item.name}</h2>
