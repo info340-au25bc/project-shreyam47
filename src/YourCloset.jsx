@@ -1,15 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import placeholder from "./img/placeholder.jpg";
 import "./index.css";
+import { ref, onValue, remove } from 'firebase/database';
+import { db } from "./firebase.js"
 
 
 
-export function YourCloset({ closet, removeFromCloset  }) {
+export function YourCloset() {
+    const [closetItems, setClosetItems] = useState([]);
+
+    useEffect(() => {
+        const closetRef = ref(db, "closetItems");
+
+        onValue(closetRef, (snapshot) => {
+            const dataObj = snapshot.val();
+            let itemsArray = [];
+            if (!dataObj) {
+                setClosetItems([]);
+            } else {
+                const keyArray = Object.keys(dataObj);
+                const newArray = keyArray.map((keyString => {
+                    const transformed = dataObj[keyString];
+                    return { id: keyString, ...transformed };
+                }));
+                setClosetItems(newArray);
+            }
+        });
+    }, []);
+
+    function removeFromCloset(id) {
+        const itemRef = ref(db, "closetItems", id);
+        remove(itemRef);
+    }
+
     return (
         <main className="saved-items container mt-4">
         <h1>Saved Items</h1>
         <div className="card-container d-flex flex-wrap">
-            {closet.map((item) => (
+            {closetItems.map((item) => (
                 <div className="card closet-card" key={item.id}>
                     <img src={placeholder} alt="Clothes Image" />
                     <div className="card-body p-2">

@@ -30,7 +30,7 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/shop" element={<Shop addToCloset={addToCloset} />} />
           <Route path="/compare" element={<CompareItems />} />
-          <Route path="/closet" element={<YourCloset closet={closet} removeFromCloset={removeFromCloset} />} />
+          <Route path="/closet" element={<YourCloset />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/view/:id" element={<ViewItem addToCloset={addToCloset} />} />
