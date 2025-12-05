@@ -26,8 +26,7 @@ export function Nav() {
             <li><NavLink className="nav-link" to="/shop">Shop</NavLink></li>
             <li><NavLink className="nav-link" to="/compare">Compare Items</NavLink></li>
             <li><NavLink className="nav-link" to="/closet">Your Closet</NavLink></li>
-            <li><NavLink className="nav-link" to="/contact">Contact Us</NavLink></li>
-          </ul>
+            <li><NavLink className="nav-link" to="/contact">Contact Us</NavLink></li>          </ul>
 
           <span className="navbar-text">
             <form className="container-fluid justify-content-start">

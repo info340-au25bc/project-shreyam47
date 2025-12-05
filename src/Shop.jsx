@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import placeholderImg from "./img/placeHolder.jpg"; // adjust the path as needed
 import './index.css';
+import { Link } from "react-router-dom";
 
 export function Shop({ addToCloset }) {
   //array placeholder for firebase; work on adding pictures
@@ -85,10 +86,15 @@ export function Shop({ addToCloset }) {
           <h2>{p.name}</h2>
           <p className="mb-0"><strong>Company: </strong>{p.company}</p>
           <p className="mb-0"><strong>Price: </strong>${p.price}</p>
-          <p className="mb-0"><strong>Fabric: </strong> {p.fabric}</p>
+          {/* <p className="mb-0"><strong>Fabric: </strong> {p.fabric}</p>
           <p className="mb-0"><strong>Rating: </strong>{p.rating}</p>
-          <p className="mb-0"><strong>Distance: </strong>{p.distance} miles</p>
-          <button className="border rounded" style={{ width: "50%" }} onClick={() => addToCloset(p)}>Save</button>
+          <p className="mb-0"><strong>Distance: </strong>{p.distance} miles</p> */}
+          <Link 
+            to={`/view/${p.id}`} 
+            state={{ product: p }}
+          >
+            <button className="border rounded" style={{ width: "50%" }}>View</button>
+          </Link>
         </div>
       </div>
     </div>
@@ -107,7 +113,6 @@ export function Shop({ addToCloset }) {
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          {/* <button className = "m-1 border rounded" type="submit">Submit</button> */}
 
           <section className="filterSection my-3 p-3 border rounded">
             <h2>Filter Products</h2>
