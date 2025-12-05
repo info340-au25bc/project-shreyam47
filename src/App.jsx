@@ -7,6 +7,7 @@ import {CompareItems} from './CompareItems';
 import {YourCloset} from './YourCloset';
 import {ContactUs} from './ContactUs';
 import { LogIn } from './LogIn';
+import { ViewItem } from './ViewItem';
 import { Footer } from './Footer';
 import './index.css';
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/closet" element={<YourCloset closet={closet} removeFromCloset={removeFromCloset} />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/login" element={<LogIn />} />
+          <Route path="/view/:id" element={<ViewItem addToCloset={addToCloset} />} />
         </Routes>
       </Router>
       <Footer />
