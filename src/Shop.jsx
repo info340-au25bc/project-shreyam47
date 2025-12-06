@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import placeholderImg from "./img/placeHolder.jpg"; // adjust the path as needed
 import './index.css';
 import { Link } from "react-router-dom";
+import { AiFillCar } from "react-icons/ai";
+import { AiFillDollarCircle } from "react-icons/ai"; 
+import { AiFillEye } from "react-icons/ai";
+import { AiOutlineFontColors } from "react-icons/ai";
 
 export function Shop({ addToCloset }) {
   //array placeholder for firebase; work on adding pictures
@@ -93,7 +97,7 @@ export function Shop({ addToCloset }) {
             to={`/view/${p.id}`} 
             state={{ product: p }}
           >
-            <button className="border rounded" style={{ width: "50%" }}>View</button>
+            <button className="border rounded" style={{ width: "50%" }}> <AiFillEye /> View</button>
           </Link>
         </div>
       </div>
@@ -151,11 +155,11 @@ export function Shop({ addToCloset }) {
             <div className="sortBySection flex-column mt-3">
               <h3>Sort By</h3>
 
-              <button className="m-1 border rounded" onClick={() => handleSortChange("price")}>Lowest Price</button>
+              <button className="m-1 border rounded" onClick={() => handleSortChange("price")}> <AiFillDollarCircle /> Lowest Price</button>
 
-              <button className="m-1 border rounded"  onClick={() => handleSortChange("distance")}>Closest Distance</button>
+              <button className="m-1 border rounded"  onClick={() => handleSortChange("distance")}><AiFillCar /> Closest Distance</button>
 
-              <button className="m-1 border rounded"  onClick={() => handleSortChange("alpha")}>Alphabetical Order</button>
+              <button className="m-1 border rounded"  onClick={() => handleSortChange("alpha")}> <AiOutlineFontColors /> Alphabetical Order</button>
             </div>
           </section>
 
