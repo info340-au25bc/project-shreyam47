@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "firebase": "^12.6.0",
+    "firebase": "^10.12.0",
+    "firebaseui": "^6.1.0",
     "react": "^19.1.1",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.1",
+    "react-firebaseui-pro": "^1.0.3",
     "react-router-dom": "^7.9.5"
   },
   "devDependencies": {
