@@ -29,7 +29,7 @@ export function YourCloset() {
     }, []);
 
     function removeFromCloset(id) {
-        const itemRef = ref(db, "closetItems", id);
+        const itemRef = ref(db, "closetItems/" + id);
         remove(itemRef);
     }
 

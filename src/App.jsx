@@ -11,11 +11,12 @@ import { ViewItem } from './ViewItem';
 import { Footer } from './Footer';
 import './index.css';
 import { auth } from "./firebase";
+import { db } from "./firebase";
+import { ref, push } from "firebase/database";
 
 function App() {
   const [user, setUser] = useState(null);
   const [authLoaded, setAuthLoaded] = useState(false);
-  const [closet, setCloset] = useState([]);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((u) => {
@@ -26,11 +27,15 @@ function App() {
   }, []);
 
   function addToCloset(item) {
-    setCloset((prev) => [...prev, item]);
-  }
-
-  function removeFromCloset(id) {
-    setCloset((prev) => prev.filter((item) => item.id !== id));
+    const closetRef = ref(db, "closetItems");
+    push(closetRef, {
+      name: item.name,
+      company: item.company,
+      price: item.price,
+      fabric: item.fabric,
+      rating: item.rating,
+      distance: item.distance
+    });
   }
 
   if (!authLoaded) {
@@ -58,7 +63,7 @@ function App() {
         />
         <Route
           path="/compare"
-          element={user ? <YourCloset user={user} /> : <Navigate to="/login" replace />}
+          element={user ? <CompareItems user={user} /> : <Navigate to="/login" replace />}
         />
         <Route
           path="/closet"
