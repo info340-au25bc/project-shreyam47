@@ -9,7 +9,6 @@ import { ContactUs } from './ContactUs';
 import { LogIn } from './LogIn';
 import { ViewItem } from './ViewItem';
 import { Footer } from './Footer';
-import { uploadClothingData } from './uploadClothingData';
 import './index.css';
 import { auth } from "./firebase";
 import { db } from "./firebase";
@@ -38,8 +37,6 @@ function App() {
       distance: item.distance
     });
   }
-
-  // uploadClothingData();
 
   if (!authLoaded) {
     return (

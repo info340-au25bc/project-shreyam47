@@ -248,6 +248,25 @@ input[type="range"]::-webkit-slider-thumb {
     height: auto;
 }
 
+.contact-wrapper {
+    font-family: sans-serif;
+}
+
+.contact-forest {
+    background-size: cover;
+    background-position: center;
+    min-height: 55vh;
+}
+
+.forest-overlay {
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.intro-section {
+    padding: 60px;
+}
+
 @media (max-width: 786px) {
     p {
         font-size: .75rem;

@@ -4,8 +4,6 @@ import "./index.css";
 import { ref, onValue, remove } from 'firebase/database';
 import { db } from "./firebase.js"
 
-
-
 export function YourCloset() {
     const [closetItems, setClosetItems] = useState([]);
 

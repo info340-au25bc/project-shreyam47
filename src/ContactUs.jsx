@@ -1,7 +1,7 @@
 import React from 'react';
 import forestImage from "./img/forest.jpeg";
 import peopleImage from "./img/people.png";
-import "./ContactUs.css";
+import "./index.css";
 
 export function ContactUs() {
     return (

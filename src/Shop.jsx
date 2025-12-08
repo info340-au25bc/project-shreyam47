@@ -101,13 +101,13 @@ export function Shop() {
 
   function renderProductGrid() {
   return filteredProducts.map((p) => (
-    <div key={p.id} className="col-12 col-sm-6 col-md-4 mb-4">
-      <div className="card h-70">
+    <div key={p.id} className="col-12 col-md-4 mb-4 d-flex justify-content-sm-center">
+      <div className="card h-70" style={{width:"400px", height:"400px"}}>
         <img 
           src={p.image || placeholderImg} 
           className="card-img-top" 
           alt={p.name} 
-          style={{ height: "200px", objectFit: "cover" }} 
+          style={{ maxWidth: "100%", maxHeight: "200px", objectFit: "cover" }} 
           onError={(e) => { e.target.src = placeholderImg; }} 
         />
         <div className="card-body p-2">
