@@ -11,7 +11,7 @@ export function ViewItem({ addToCloset }) {
   return (
     <main className="container mt-4">
       <div className="card mx-auto" style={{ width: "24rem" }}>
-        <img src={placeholderImg} className="card-img-top" alt={item.name} />
+        <img src={item.image} className="card-img-top" alt={item.name} />
 
         <div className="card-body">
           <h2>{item.name}</h2>

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import placeholderImg from "./img/placeHolder.jpg"; // adjust the path as needed
+import React, { useState, useEffect } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
+import placeholderImg from "./img/placeHolder.jpg";
 import './index.css';
 import { Link } from "react-router-dom";
 import { AiFillCar } from "react-icons/ai";
@@ -7,18 +8,35 @@ import { AiFillDollarCircle } from "react-icons/ai";
 import { AiFillEye } from "react-icons/ai";
 import { AiOutlineFontColors } from "react-icons/ai";
 
-export function Shop({ addToCloset }) {
-  //array placeholder for firebase; work on adding pictures
-  const products = [
-    { id: 1, name: "Cotton Shirt", company: "EcoWear", price: "15", fabric: "Cotton", rating: 3, distance: "20"},
-    { id: 2, name: "Nylon Shirt", company: "GreenWorld", price: "25", fabric: "Nylon", rating: 5, distance: "10"},
-    { id: 3, name: "Polyester Shirt", company: "Suscanability", price: "10", fabric: "Polyester", rating: 4, distance: "50"}
-  ];
-
+export function Shop() {
+  const [products, setProducts] = useState([]);
+  
   const [selectedFabrics, setSelectedFabrics] = useState(new Set());
   const [minRating, setMinRating] = useState(0);
   const [sortBy, setSortBy] = useState(null);
   const [searchText, setSearchText] = useState("");
+
+  useEffect(() => {
+    const db = getDatabase();
+    const productsRef = ref(db, "products"); 
+
+    const unregisterFunction = onValue(productsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const productsArray = Object.keys(data).map(key => {
+            return { ...data[key], firebaseKey: key }; 
+        });
+        setProducts(productsArray);
+      } else {
+        setProducts([]);
+      }
+    });
+    return () => unregisterFunction();
+  }, []);
+
+
+
+
 
   function handleFabricChange(fabric) {
     setSelectedFabrics((prev) => {
@@ -85,7 +103,13 @@ export function Shop({ addToCloset }) {
   return filteredProducts.map((p) => (
     <div key={p.id} className="col-12 col-sm-6 col-md-4 mb-4">
       <div className="card h-70">
-        <img src={placeholderImg} className="card-img-top" alt={p.name} />
+        <img 
+          src={p.image || placeholderImg} 
+          className="card-img-top" 
+          alt={p.name} 
+          style={{ height: "200px", objectFit: "cover" }} 
+          onError={(e) => { e.target.src = placeholderImg; }} 
+        />
         <div className="card-body p-2">
           <h2>{p.name}</h2>
           <p className="mb-0"><strong>Company: </strong>{p.company}</p>
@@ -159,7 +183,7 @@ export function Shop({ addToCloset }) {
 
               <button className="m-1 border rounded"  onClick={() => handleSortChange("distance")}><AiFillCar /> Closest Distance</button>
 
-              <button className="m-1 border rounded"  onClick={() => handleSortChange("alpha")}> <AiOutlineFontColors /> Alphabetical Order</button>
+              <button className="m-1 border rounded"  onClick={() => handleSortChange("alphabetical")}> <AiOutlineFontColors /> Alphabetical Order</button>
             </div>
           </section>
 
