@@ -6,6 +6,7 @@ export const sustainableClothingData = [
     fabric: "Cotton",
     rating: 4.6,
     distance: 2.1,
+    image: "https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Recycled Denim Jeans",
@@ -14,6 +15,7 @@ export const sustainableClothingData = [
     fabric: "Cotton",
     rating: 4.8,
     distance: 3.4,
+    image: "https://images.unsplash.com/photo-1602293589930-45aad59ba3ab?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Hemp Everyday Shorts",
@@ -22,22 +24,7 @@ export const sustainableClothingData = [
     fabric: "Cotton",
     rating: 4.5,
     distance: 1.9,
-  },
-  {
-    name: "Lyocell Flowy Dress",
-    company: "EcoChic",
-    price: 68,
-    fabric: "Tencel Lyocell",
-    rating: 4.7,
-    distance: 4.0,
-  },
-  {
-    name: "Merino Wool Sweater",
-    company: "Northbound Knit",
-    price: 98,
-    fabric: "Wool",
-    rating: 4.9,
-    distance: 2.8,
+    image: "https://plus.unsplash.com/premium_photo-1710451835325-afb4ec719a8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGVtcCUyMHNob3J0c3xlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     name: "Upcycled Patch Jacket",
@@ -46,22 +33,7 @@ export const sustainableClothingData = [
     fabric: "Mixed Fabrics",
     rating: 4.4,
     distance: 5.1,
-  },
-  {
-    name: "Bamboo Lounge Pants",
-    company: "GreenNest",
-    price: 52,
-    fabric: "Bamboo",
-    rating: 4.6,
-    distance: 2.3,
-  },
-  {
-    name: "Organic Linen Button-Up",
-    company: "PureLine",
-    price: 64,
-    fabric: "Linen",
-    rating: 4.5,
-    distance: 3.0,
+    image: "https://images.unsplash.com/photo-1551817456-6e3e99fc9b9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGF0Y2glMjBqYWNrZXR8ZW58MHx8MHx8fDA%3D"
   },
   {
     name: "Recycled Fleece Hoodie",
@@ -70,22 +42,7 @@ export const sustainableClothingData = [
     fabric: "Polyester",
     rating: 4.3,
     distance: 4.4,
-  },
-  {
-    name: "Hemp Athletic Tank",
-    company: "NaturFlex",
-    price: 33,
-    fabric: "Hemp",
-    rating: 4.2,
-    distance: 1.6,
-  },
-  {
-    name: "Organic Cotton Cargo Pants",
-    company: "UrbanSprout",
-    price: 58,
-    fabric: "Cotton",
-    rating: 4.6,
-    distance: 5.7,
+    image: "https://images.unsplash.com/photo-1685328403755-de1d57e12e63?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Recycled Nylon Windbreaker",
@@ -94,30 +51,7 @@ export const sustainableClothingData = [
     fabric: "Nylon",
     rating: 4.4,
     distance: 6.2,
-  },
-  {
-    name: "Wool Blend Scarf",
-    company: "Cascade Loom",
-    price: 42,
-    fabric: "Wool",
-    rating: 4.8,
-    distance: 1.2,
-  },
-  {
-    name: "Organic Cotton Socks (3-Pack)",
-    company: "BareBasics",
-    price: 18,
-    fabric: "Cotton",
-    rating: 4.7,
-    distance: 0.8,
-  },
-  {
-    name: "Tencel High-Waisted Skirt",
-    company: "EcoChic",
-    price: 55,
-    fabric: "Tencel Lyocell",
-    rating: 4.5,
-    distance: 4.0,
+    image: "https://images.unsplash.com/photo-1685328403755-de1d57e12e63?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Upcycled Leather Tote",
@@ -126,6 +60,7 @@ export const sustainableClothingData = [
     fabric: "Leather",
     rating: 4.9,
     distance: 6.5,
+    image: "https://images.unsplash.com/photo-1685328403755-de1d57e12e63?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Recycled Polyester Puffer Vest",
@@ -134,6 +69,7 @@ export const sustainableClothingData = [
     fabric: "Polyester",
     rating: 4.1,
     distance: 3.9,
+    image: "https://images.unsplash.com/photo-1685328403755-de1d57e12e63?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Organic Cotton Hoodie",
@@ -142,6 +78,7 @@ export const sustainableClothingData = [
     fabric: "Cotton",
     rating: 4.6,
     distance: 2.1,
+    image: "https://images.unsplash.com/photo-1685328403755-de1d57e12e63?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Hemp Oversized Tee",
@@ -150,6 +87,7 @@ export const sustainableClothingData = [
     fabric: "Cotton",
     rating: 4.3,
     distance: 1.9,
+    image: "https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Recycled Wool Coat",
@@ -158,6 +96,7 @@ export const sustainableClothingData = [
     fabric: "Wool",
     rating: 4.8,
     distance: 2.8,
+    image: "https://images.unsplash.com/photo-1685328403755-de1d57e12e63?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Organic Linen Shorts",
@@ -166,6 +105,7 @@ export const sustainableClothingData = [
     fabric: "Linen",
     rating: 4.5,
     distance: 3.0,
+    image: "https://plus.unsplash.com/premium_photo-1673356302222-45a739587333?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Recycled Running Leggings",
@@ -174,6 +114,7 @@ export const sustainableClothingData = [
     fabric: "Polyester",
     rating: 4.4,
     distance: 1.6,
+    image: "https://plus.unsplash.com/premium_photo-1673356302222-45a739587333?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Bamboo Long Sleeve Top",
@@ -182,14 +123,7 @@ export const sustainableClothingData = [
     fabric: "Bamboo",
     rating: 4.6,
     distance: 2.3,
-  },
-  {
-    name: "Organic Cotton Beanie",
-    company: "BareBasics",
-    price: 22,
-    fabric: "Cotton",
-    rating: 4.7,
-    distance: 0.8,
+    image: "https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Upcycled Denim Skirt",
@@ -198,6 +132,7 @@ export const sustainableClothingData = [
     fabric: "Denim",
     rating: 4.5,
     distance: 5.1,
+    image: "https://images.unsplash.com/photo-1562041350-7778a082a797?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Recycled Polyester Rain Jacket",
@@ -206,6 +141,7 @@ export const sustainableClothingData = [
     fabric: "Polyester",
     rating: 4.3,
     distance: 6.2,
+    image: "https://images.unsplash.com/photo-1685328403755-de1d57e12e63?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Organic Cotton Joggers",
@@ -214,6 +150,7 @@ export const sustainableClothingData = [
     fabric: "Cotton",
     rating: 4.6,
     distance: 5.7,
+    image: "https://plus.unsplash.com/premium_photo-1673356302222-45a739587333?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Hemp Work Shirt",
@@ -222,6 +159,7 @@ export const sustainableClothingData = [
     fabric: "Hemp",
     rating: 4.4,
     distance: 1.9,
+    image: "https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Tencel Everyday Blouse",
@@ -230,6 +168,7 @@ export const sustainableClothingData = [
     fabric: "Tencel Lyocell",
     rating: 4.5,
     distance: 4.0,
+    image: "https://images.unsplash.com/photo-1562041350-7778a082a797?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Recycled PET Athletic Jacket",
@@ -238,5 +177,6 @@ export const sustainableClothingData = [
     fabric: "Polyester",
     rating: 4.4,
     distance: 4.4,
+    image: "https://images.unsplash.com/photo-1685328403755-de1d57e12e63?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ];
