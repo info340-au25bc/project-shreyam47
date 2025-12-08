@@ -2,6 +2,7 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/database";
+import "firebase/compat/firestore";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -23,4 +24,5 @@ firebase.initializeApp(firebaseConfig);
 
 export const auth = firebase.auth();
 export const db = firebase.database();
+export const firestore = firebase.firestore();
 export default firebase;
