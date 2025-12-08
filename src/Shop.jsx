@@ -8,9 +8,8 @@ import { AiFillDollarCircle } from "react-icons/ai";
 import { AiFillEye } from "react-icons/ai";
 import { AiOutlineFontColors } from "react-icons/ai";
 
-export function Shop() {
+export function Shop({ closetTotal = 0 }) {
   const [products, setProducts] = useState([]);
-  
   const [selectedFabrics, setSelectedFabrics] = useState(new Set());
   const [minRating, setMinRating] = useState(0);
   const [sortBy, setSortBy] = useState(null);
@@ -114,9 +113,6 @@ export function Shop() {
           <h2>{p.name}</h2>
           <p className="mb-0"><strong>Company: </strong>{p.company}</p>
           <p className="mb-0"><strong>Price: </strong>${p.price}</p>
-          {/* <p className="mb-0"><strong>Fabric: </strong> {p.fabric}</p>
-          <p className="mb-0"><strong>Rating: </strong>{p.rating}</p>
-          <p className="mb-0"><strong>Distance: </strong>{p.distance} miles</p> */}
           <Link 
             to={`/view/${p.id}`} 
             state={{ product: p }}
@@ -189,7 +185,7 @@ export function Shop() {
 
           <div className="sustainabilityCalculator p-3 border rounded">
             <h4>Sustainability Calculator</h4>
-            <p id="sustainabilityCalcNum">$0</p>
+            <p id="sustainabilityCalcNum">${closetTotal}</p>
           </div>
         </div>
 

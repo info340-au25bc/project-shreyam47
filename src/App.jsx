@@ -17,6 +17,7 @@ import { ref, push } from "firebase/database";
 function App() {
   const [user, setUser] = useState(null);
   const [authLoaded, setAuthLoaded] = useState(false);
+  const [closetTotal, setClosetTotal] = useState(0);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((u) => {
@@ -36,6 +37,8 @@ function App() {
       rating: item.rating,
       distance: item.distance
     });
+
+    setClosetTotal((prev) => Number(prev) + Number(item.price));
   }
 
   if (!authLoaded) {
@@ -59,7 +62,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route
           path="/shop"
-          element={user ? <Shop user={user} /> : <Navigate to="/login" replace />}
+          element={user ? <Shop user={user} closetTotal={closetTotal} /> : <Navigate to="/login" replace />}
         />
         <Route
           path="/compare"

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useLocation, useParams, Link } from "react-router-dom";
-import placeholderImg from "./img/placeHolder.jpg";
 import { AiFillSave } from "react-icons/ai";
 
 export function ViewItem({ addToCloset }) {
@@ -16,8 +15,8 @@ export function ViewItem({ addToCloset }) {
 
   return (
     <main className="container mt-4">
-      <div className="card mx-auto" style={{ width: "24rem" }}>
-        <img src={item.image} className="card-img-top" alt={item.name} />
+      <div className="card mx-auto" style={{width:"400px", maxHeight:"750px"}}>
+        <img src={item.image} className="card-img-top" alt={item.name} style={{width:"100%", maxHeight: "400px"}}/>
 
         <div className="card-body">
           <h2>{item.name}</h2>
