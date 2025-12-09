@@ -1,0 +1,114 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Vintage Denim Jacket",
+            "company": "Thrifted Finds",
+            "price": 45,
+            "fabric": "Cotton",
+            "rating": 5,
+            "distance": 5,
+            "image": "/img/jacket.jpg",
+            "description": "A classic 90s denim jacket in excellent condition. Saved from landfill."
+        },
+        {
+            "id": 2,
+            "name": "Organic Hemp Tee",
+            "company": "EcoBasic",
+            "price": 25,
+            "fabric": "Cotton",
+            "rating": 4,
+            "distance": 12,
+            "image": "/img/tee.jpg",
+            "description": "Breathable, durable, and made with 100% organic materials."
+        },
+        {
+            "id": 3,
+            "name": "Recycled Poly Sweater",
+            "company": "GreenGear",
+            "price": 60,
+            "fabric": "Polyester",
+            "rating": 5,
+            "distance": 2,
+            "image": "/img/sweater.jpg",
+            "description": "Made entirely from recycled water bottles."
+        },
+        {
+            "id": 4,
+            "name": "Upcycled Nylon Windbreaker",
+            "company": "ReNew",
+            "price": 35,
+            "fabric": "Nylon",
+            "rating": 3,
+            "distance": 20,
+            "image": "/img/windbreaker.jpg",
+            "description": "Lightweight jacket remade from industrial surplus nylon."
+        },
+        {
+            "id": 5,
+            "name": "Bamboo Fiber Scarf",
+            "company": "SoftEarth",
+            "price": 18,
+            "fabric": "Cotton",
+            "rating": 4,
+            "distance": 8,
+            "image": "/img/scarf.jpg",
+            "description": "Incredibly soft scarf made from sustainable bamboo viscose."
+        },
+        {
+            "id": 6,
+            "name": "Organic Canvas Tote",
+            "company": "EcoBasic",
+            "price": 12,
+            "fabric": "Cotton",
+            "rating": 5,
+            "distance": 3,
+            "image": "/img/tote.jpg",
+            "description": "Durable grocery tote made from 100% organic cotton canvas."
+        },
+        {
+            "id": 7,
+            "name": "Active Leggings",
+            "company": "GreenGear",
+            "price": 45,
+            "fabric": "Polyester",
+            "rating": 4,
+            "distance": 15,
+            "image": "/img/leggings.jpg",
+            "description": "High-performance leggings made from recycled plastic bottles."
+        },
+        {
+            "id": 8,
+            "name": "Vintage Nylon Tracksuit",
+            "company": "Thrifted Finds",
+            "price": 50,
+            "fabric": "Nylon",
+            "rating": 3,
+            "distance": 25,
+            "image": "/img/tracksuit.jpg",
+            "description": "Authentic 80s style tracksuit saved from the landfill."
+        },
+        {
+            "id": 9,
+            "name": "Reclaimed Cotton Hat",
+            "company": "ReNew",
+            "price": 22,
+            "fabric": "Cotton",
+            "rating": 5,
+            "distance": 7,
+            "image": "/img/hat.jpg",
+            "description": "Baseball cap made from scraps of factory floor cotton."
+        },
+        {
+            "id": 10,
+            "name": "Recycled Swim Trunks",
+            "company": "GreenGear",
+            "price": 38,
+            "fabric": "Polyester",
+            "rating": 4,
+            "distance": 9,
+            "image": "/img/swim.jpg",
+            "description": "Quick-dry swim trunks made from ocean-bound plastics."
+        }
+    ]
+}

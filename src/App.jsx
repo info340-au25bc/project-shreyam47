@@ -35,7 +35,8 @@ function App() {
       price: item.price,
       fabric: item.fabric,
       rating: item.rating,
-      distance: item.distance
+      distance: item.distance,
+      image: item.image
     });
 
     setClosetTotal((prev) => Number(prev) + Number(item.price));

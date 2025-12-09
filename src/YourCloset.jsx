@@ -37,11 +37,16 @@ export function YourCloset() {
             <div className="card-container d-flex flex-wrap">
                 {closetItems.map((item) => (
                     <div className="card closet-card" key={item.id}>
-                        <img src={placeholder} alt="Clothes Image" />
+                        <img 
+                            src={item.image || placeholder} 
+                            className="card-img-top" 
+                            alt={item.name}
+                            style={{ height: "200px", objectFit: "cover" }}
+                            onError={(e) => { e.target.src = placeholder; }} 
+                        />
                         <div className="card-body p-2">
                             <h2>{item.name}</h2>
                             <p className="mb-0"><strong>Company: </strong>{item.company}</p>
-                            <p className="mb-0"><strong>Name: </strong>{item.company}</p>
                             <p className="mb-0"><strong>Price: </strong>${item.price}</p>
                             <p className="mb-0"><strong>Fabric: </strong> {item.fabric}</p>
                             <p className="mb-0"><strong>Rating: </strong>{item.rating}</p>
