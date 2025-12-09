@@ -28,7 +28,7 @@ export function ContactUs() {
                             <strong>Shreya Madhavan</strong>: Sophomore in Informatics with a concentration in Human Computer Interaction. Minoring in Business. Email: shreym47@uw.edu
                         </p>
                         <p>
-                            <strong>Anmol Gill</strong>: Sophomore intending to major in Informatics. Email: anmol324@uw.edu
+                            <strong>Anmol Gill</strong>: Sophomore in Informatics. Email: anmol324@uw.edu
                         </p>
                         <p>
                             <strong>Roman Nekrasov</strong>: Senior in Informatics. Email: nekrasov@uw.edu
