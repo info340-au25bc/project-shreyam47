@@ -3,6 +3,8 @@ import { useLocation, useParams, Link } from "react-router-dom";
 import { AiFillSave } from "react-icons/ai";
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+import placeholder from "./img/placeholder.jpg";
+
 
 export function ViewItem({ addToCloset }) {
   const [showDialog, setShowDialog] = useState(false);
@@ -15,14 +17,30 @@ export function ViewItem({ addToCloset }) {
     setShowDialog(true);
   }; 
 
+  if (!item) {
+    return (
+      <div className="container mt-5 text-center">
+        <h2>Product Not Found</h2>
+        <p>It looks like you refreshed the page. Please select an item again.</p>
+        <Link to="/shop" className="btn btn-primary">Back to Shop</Link>
+      </div>
+    );
+  }
+
+
+
   return (
     <main className="container mt-4">
-      <div className="card mx-auto" style={{width:"400px", maxHeight:"750px"}}>
-        <img src={item.image} className="card-img-top" alt={item.name} style={{width:"100%", maxHeight: "400px"}}/>
-
+      <div className="card mx-auto" style={{ maxWidth: "400px", width: "100%" }}>
+        <img 
+            src={item.image || placeholder} 
+            className="card-img-top" 
+            alt={item.name} 
+            style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }}
+            onError={(e) => { e.target.src = placeholder; }}
+        />
         <div className="card-body">
           <h2>{item.name}</h2>
-
           <p><strong>Company:</strong> {item.company}</p>
           <p><strong>Price:</strong> ${item.price}</p>
           <p><strong>Fabric:</strong> {item.fabric}</p>
