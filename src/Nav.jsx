@@ -26,25 +26,15 @@ export function NavBar({ user }) {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">
-              Home
-            </Nav.Link>
-            <Nav.Link as={Link} to="/shop">
-              Shop
-            </Nav.Link>
-            <Nav.Link as={Link} to="/compare">
-              Compare Items
-            </Nav.Link>
-            <Nav.Link as={Link} to="/closet">
-              Your Closet
-            </Nav.Link>
-            <Nav.Link as={Link} to="/contact">
-              Contact Us
-            </Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/shop">Shop</Nav.Link>
+            <Nav.Link as={Link} to="/compare">Compare Items</Nav.Link>
+            <Nav.Link as={Link} to="/closet">Your Closet</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
           </Nav>
 
           <Nav className="ms-auto">
-            <button className="border rounded">{user ? 'Log Out' : 'Log In'}</button>
+            <button className="border rounded" onClick={handleAuthClick}>{user ? 'Log Out' : 'Log In'}</button>
           </Nav>
         </Navbar.Collapse>
       </Container>
