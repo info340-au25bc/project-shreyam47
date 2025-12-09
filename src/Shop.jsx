@@ -98,8 +98,8 @@ export function Shop({ closetTotal = 0 }) {
 
   function renderProductGrid() {
   return filteredProducts.map((p) => (
-    <div key={p.id} className="col-12 col-md-4 mb-4 d-flex justify-content-sm-center">
-      <Card style={{minWidth:"300px", height:"400px"}}>
+    <div key={p.id} className="col-12 col-lg-3 col-m-6 mb-4" style={{minWidth:"250px"}}>
+      <Card style={{maxWidth:"300px", height:"400px"}}>
         <Card.Img src={p.image} alt={p.name} style={{ maxWidth: "100%", maxHeight: "200px", objectFit: "cover" }} onError={(e) => { e.target.src = placeholderImg; }}/>
 
         <CardBody className="card-body p-2">
@@ -179,8 +179,8 @@ export function Shop({ closetTotal = 0 }) {
           </div>
         </div>
 
-        <div className="gridView d-flex justify-content-evenly flex-wrap mx-1 col-12 col-sm-9">
-          <div className="row g-3">
+        <div className="gridView col-4 col-sm-9 d-flex justify-content-around">
+          <div className="row">
             {renderProductGrid()}
           </div>  
         </div>
