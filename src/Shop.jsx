@@ -119,10 +119,13 @@ export function Shop({ closetTotal = 0 }) {
     <>
       <main className="d-flex flex-column flex-md-row justify-content-between m-3 ">
         <div className="firstColumn flex-grow-1 flex-column flex-wrap col-12 col-md-3 ">
+          <label htmlFor="searchProducts" className="form-label fw-semibold">
+            Search Products
+          </label>
           <input
             type="text"
             id="searchProducts"
-            placeholder="Search.."
+            placeholder="Search…"
             className="form-control mb-2"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
@@ -149,18 +152,19 @@ export function Shop({ closetTotal = 0 }) {
                 ))}
             </div>
 
-            <div className="ratingSection mt-3">
-              <h3>Rating (1-5)</h3>
-              <input
-                type="range"
-                className="form-range"
-                min="0"
-                max="5"
-                step="1"
-                value={minRating}
-                onChange={handleRatingChange}
-              />
-            </div>
+            <label htmlFor="ratingSlider" className="fw-semibold">
+              <h3>Rating (1–5)</h3>
+            </label>
+            <input
+              type="range"
+              id="ratingSlider"
+              className="form-range"
+              min="0"
+              max="5"
+              step="1"
+              value={minRating}
+              onChange={handleRatingChange}
+            />
 
             <div className="sortBySection flex-column mt-3">
               <h3>Sort By</h3>

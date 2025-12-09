@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import placeholder from "./img/placeholder.jpg";
+import placeholder from "./img/placeHolder.jpg";
 import "./index.css";
-import { ref, onValue, remove } from 'firebase/database';
 import { db } from "./firebase.js"
 
 export function YourCloset() {
     const [closetItems, setClosetItems] = useState([]);
 
     useEffect(() => {
-        const closetRef = ref(db, "closetItems");
+        const closetRef = db.ref("closetItems");
 
-        onValue(closetRef, (snapshot) => {
+        const listener = closetRef.on("value", (snapshot) => {
             const dataObj = snapshot.val();
             let itemsArray = [];
             if (!dataObj) {
@@ -24,11 +23,12 @@ export function YourCloset() {
                 setClosetItems(newArray);
             }
         });
+        return () => closetRef.off("value", listener);
     }, []);
 
     function removeFromCloset(id) {
-        const itemRef = ref(db, "closetItems/" + id);
-        remove(itemRef);
+        const itemRef = db.ref("closetItems/" + id);
+        itemRef.remove();
     }
 
     return (

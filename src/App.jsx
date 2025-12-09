@@ -12,7 +12,6 @@ import { Footer } from './Footer';
 import './index.css';
 import { auth } from "./firebase";
 import { db } from "./firebase";
-import { ref, push } from "firebase/database";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -28,8 +27,8 @@ function App() {
   }, []);
 
   function addToCloset(item) {
-    const closetRef = ref(db, "closetItems");
-    push(closetRef, {
+    const closetRef = db.ref("closetItems");
+    closetRef.push({
       name: item.name,
       company: item.company,
       price: item.price,
@@ -82,6 +81,9 @@ function App() {
           path="/view/:id" 
           element={<ViewItem addToCloset={addToCloset} />} 
         />
+
+        <Route path="*" element={<div className="container mt-5"><h2>Page Not Found</h2><p>The page you are looking for does not exist.</p></div>} />
+
       </Routes>
       <Footer />
     </Router>
