@@ -1,63 +1,53 @@
 import React from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { auth } from './firebase';
 import './index.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
 
-export function Nav({ user }) {
-  const navigate = useNavigate();
-
-  function handleAuthClick() {
+export function NavBar({ user }) {
+  const handleAuthClick = async () => {
     if (user) {
-      // Sign out
-      auth.signOut().then(() => {
-        navigate('/');
-      });
+      await auth.signOut();
+      window.location.href = '/';
     } else {
-      // Navigate to login
-      navigate('/login');
+      window.location.href = '/login';
     }
-  }
+  };
 
   return (
-    <nav className="navbar d-flex flex-row justify-content-end navbar-expand-lg p-2">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">GreenThread</Link>
+    <Navbar expand="lg">
+      <Container>
+        <Navbar.Brand as={Link} to="/">GreenThread</Navbar.Brand>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-        <div className="collapse navbar-collapse" id="navbarText">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li><NavLink className="nav-link" to="/">Home</NavLink></li>
-            <li><NavLink className="nav-link" to="/shop">Shop</NavLink></li>
-            <li><NavLink className="nav-link" to="/compare">Compare Items</NavLink></li>
-            <li><NavLink className="nav-link" to="/closet">Your Closet</NavLink></li>
-            <li><NavLink className="nav-link" to="/contact">Contact Us</NavLink></li>
-          </ul>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/shop">
+              Shop
+            </Nav.Link>
+            <Nav.Link as={Link} to="/compare">
+              Compare Items
+            </Nav.Link>
+            <Nav.Link as={Link} to="/closet">
+              Your Closet
+            </Nav.Link>
+            <Nav.Link as={Link} to="/contact">
+              Contact Us
+            </Nav.Link>
+          </Nav>
 
-          <span className="navbar-text">
-            <form className="container-fluid justify-content-start">
-              <button 
-                id="signUpLink" 
-                type="button"
-                onClick={handleAuthClick}
-                style={{ cursor: 'pointer' }}
-              >
-                {user ? 'Log Out' : 'Log In'}
-              </button>
-            </form>
-          </span>
-        </div>
-      </div>
-    </nav>
+          <Nav className="ms-auto">
+            <button className="border rounded">{user ? 'Log Out' : 'Log In'}</button>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }

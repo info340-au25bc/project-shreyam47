@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useLocation, useParams, Link } from "react-router-dom";
 import { AiFillSave } from "react-icons/ai";
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
 
 export function ViewItem({ addToCloset }) {
   const [showDialog, setShowDialog] = useState(false);
@@ -32,21 +34,18 @@ export function ViewItem({ addToCloset }) {
       </div>
 
       {showDialog && (
-        <div style={{position: "fixed", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0, 0, 0, 0.5)", display: "flex", justifyContent: "center", alignItems: "center" }} onClick={() => setShowDialog(false)}>
-          <div
-            style={{
-              backgroundColor: "white",
-              padding: "2rem",
-              borderRadius: "0.5rem",
-              textAlign: "center",
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            }}>
-            <p>
-              Item added: Go view Your Closet!
-            </p>
-            <button onClick={() => setShowDialog(false)} style={{backgroundColor: "#626F47", borderRadius: "0.25rem"}}>Close</button>
+        <Alert show={showDialog} variant="success" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 9999, borderRadius: 0 }}>
+          <Alert.Heading>Success!</Alert.Heading>
+          <p>
+            Item added: Go view Your Closet!
+          </p>
+          <hr />
+          <div className="d-flex justify-content-end">
+            <Button onClick={() => setShowDialog(false)} variant="outline-success">
+              Close
+            </Button>
           </div>
-        </div>
+        </Alert>
       )}
     </main>
   );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Nav } from './Nav';
+import { NavBar } from './Nav';
 import { Index } from './Index';
 import { Shop } from './Shop';
 import { CompareItems } from './CompareItems';
@@ -57,7 +57,7 @@ function App() {
 
   return (
     <Router>
-      <Nav user={user} />
+      <NavBar user={user} />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route

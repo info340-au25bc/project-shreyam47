@@ -7,6 +7,8 @@ import { AiFillCar } from "react-icons/ai";
 import { AiFillDollarCircle } from "react-icons/ai"; 
 import { AiFillEye } from "react-icons/ai";
 import { AiOutlineFontColors } from "react-icons/ai";
+import Card from 'react-bootstrap/Card';
+import { CardBody } from "react-bootstrap";
 
 export function Shop({ closetTotal = 0 }) {
   const [products, setProducts] = useState([]);
@@ -32,10 +34,6 @@ export function Shop({ closetTotal = 0 }) {
     });
     return () => unregisterFunction();
   }, []);
-
-
-
-
 
   function handleFabricChange(fabric) {
     setSelectedFabrics((prev) => {
@@ -101,34 +99,26 @@ export function Shop({ closetTotal = 0 }) {
   function renderProductGrid() {
   return filteredProducts.map((p) => (
     <div key={p.id} className="col-12 col-md-4 mb-4 d-flex justify-content-sm-center">
-      <div className="card h-70" style={{width:"400px", height:"400px"}}>
-        <img 
-          src={p.image || placeholderImg} 
-          className="card-img-top" 
-          alt={p.name} 
-          style={{ maxWidth: "100%", maxHeight: "200px", objectFit: "cover" }} 
-          onError={(e) => { e.target.src = placeholderImg; }} 
-        />
-        <div className="card-body p-2">
-          <h2>{p.name}</h2>
+      <Card style={{minWidth:"300px", height:"400px"}}>
+        <Card.Img src={p.image} alt={p.name} style={{ maxWidth: "100%", maxHeight: "200px", objectFit: "cover" }} onError={(e) => { e.target.src = placeholderImg; }}/>
+
+        <CardBody className="card-body p-2">
+          <Card.Title>{p.name}</Card.Title>
           <p className="mb-0"><strong>Company: </strong>{p.company}</p>
           <p className="mb-0"><strong>Price: </strong>${p.price}</p>
-          <Link 
-            to={`/view/${p.id}`} 
-            state={{ product: p }}
-          >
+          <Link to={`/view/${p.id}`} state={{ product: p }}>
             <button className="border rounded" style={{ width: "50%" }}> <AiFillEye /> View</button>
           </Link>
-        </div>
-      </div>
+        </CardBody>
+      </Card>
     </div>
   ));
 }
 
   return (
     <>
-      <main className="d-flex flex-column flex-md-row justify-content-between m-3">
-        <div className="firstColumn flex-grow-1 flex-column flex-wrap col-12 col-md-3">
+      <main className="d-flex flex-column flex-md-row justify-content-between m-3 ">
+        <div className="firstColumn flex-grow-1 flex-column flex-wrap col-12 col-md-3 ">
           <input
             type="text"
             id="searchProducts"
