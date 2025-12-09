@@ -100,7 +100,7 @@ export function Shop({ closetTotal = 0 }) {
   return filteredProducts.map((p) => (
     <div key={p.id} className="col-12 col-lg-3 col-m-6 mb-4" style={{minWidth:"250px"}}>
       <Card style={{maxWidth:"300px", height:"400px"}}>
-        <Card.Img src={p.image} alt={p.name} style={{ maxWidth: "100%", maxHeight: "200px", objectFit: "cover" }} onError={(e) => { e.target.src = placeholderImg; }}/>
+        <Card.Img src={p.image} alt={p.name} style={{ maxWidth: "100%", maxHeight: "200px"}}/>
 
         <CardBody className="card-body p-2">
           <Card.Title>{p.name}</Card.Title>

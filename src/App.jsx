@@ -38,7 +38,7 @@ function App() {
       image: item.image
     });
 
-    setClosetTotal((prev) => Number(prev) + Number(item.price));
+    setClosetTotal((prev) => prev + item.price);
   }
 
   if (!authLoaded) {
